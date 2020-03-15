@@ -1,0 +1,347 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+
+    height: 3000px;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    background-color: black;
+}
+
+.main {
+    position: relative;
+    height: 100%;
+}
+
+
+/* HEADER & SECTION DEFS */
+
+.header {
+    font-family: 'Montserrat';
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 1px #005994;
+
+    display: none;
+}
+
+.section {
+    position: absolute;
+    background-color: #fff;
+    padding: 15px 10px;
+    height: 750px;
+    width: 100vw;
+}
+
+.anchor {
+    position: absolute;
+    height: 150px;
+    left: 6vw;
+    padding-top: 100px;
+}
+
+
+/* NAVIGATION */
+
+.nav {
+    top: 0px;
+    height: 55px;
+    width: 600px;
+    right: 0px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: fixed;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 40px;
+}
+
+.nav__list {
+    list-style: none;
+}
+
+.nav__list-item {
+    float: left;
+    padding: 0px 30px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+    font-family: 'Bai Jamjuree';
+    font-weight: 700;
+    font-style: italic;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeIn 0.6s cubic-bezier(0.85, 0.05, 0.795, 0.005) forwards;
+}
+
+.nav__link:hover {
+    border-bottom: 2px solid black;
+}
+
+#moon {
+    position: fixed;
+    right: 595px;
+    top: 35px;
+}
+
+
+/* HERO */
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 9;
+    opacity: 0;
+}
+
+.hero__logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    color: white;
+    left: calc(50% - 80px);
+    top: calc(45% - 80px);
+    font-family: 'Bai Jamjuree';
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    user-select: none;
+    opacity: 0;
+}
+
+.hero__logo--red {
+    color: rgb(255, 104, 104);
+    left: calc(50% - 78px);
+    top: calc(45% - 78px);
+}
+
+.hero__logo--blue {
+    color: rgb(68, 68, 255);
+    left: calc(50% - 76px);
+    top: calc(45% - 76px);
+}
+
+.hero__logo--yellow {
+    color: rgb(255, 255, 101);
+    left: calc(50% - 74px);
+    top: calc(45% - 74px);
+}
+
+.hero__logo--white {
+    text-shadow: 0 0 2px black;
+}
+
+
+/* ABOUT SECTION */
+
+.about__image-left {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: calc(100% - 10px);
+    border: 5px solid white;
+    background-color: red;
+    clip-path: polygon(0% 0, 49% 0, 69% 100%, 0% 100%);
+    background-image: url('https://blog.edinchavez.com/wp-content/uploads/2018/05/Best-Places-To-Photograph-In-NYC-5.jpg');
+    background-size: contain;
+}
+
+.about__image-right {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: calc(100% - 10px);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 70% 100%);
+    background-image: url('https://www.jamesmaherphotography.com/jamesmaherphotography/wp-content/uploads/2017/12/New_York_Street_Photography-2.jpg');
+    background-size: contain;
+    border: 5px solid white;
+}
+
+
+/* FOOTER */
+
+.footer {
+    position: relative;
+    bottom: -26px;
+    width: 100%;
+    height: 20px;
+    font-family: 'Montserrat';
+    background-color: #005994;
+    color: white;
+    font-size: 12px;
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+
+    display: none;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Breakpoint for mobile */
+@media screen and (max-width: 900px) {
+
+    .section {
+        width: 100vw;
+        left: 0px;
+        height: 120vw;
+        border-radius: 0px;
+    }
+
+    .anchor {
+        left: 0vw;
+    }
+
+    .header {
+        width: 100vw;
+        text-align: center;
+        left: 0px;
+        font-size: 42px;
+    }
+
+    .nav__container {
+        width: 70vw;
+    }
+
+    .nav {
+        display: none;
+        width: 70vw;
+        height: 100vh;
+        position: fixed;
+        left: 30vw;
+        text-align: center;
+        z-index: 8;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav__list {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .nav__list-item {
+        float: left;
+        display: block;
+        padding-top: 80px;
+        padding: 40px 0px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav__mobile-checkbox {
+        display: none;
+    }
+
+    .nav__mobile-bar {
+        position: fixed;
+        height: 60px;
+        width: 100vw;
+        background-color: #005994;
+        z-index: 9;
+    }
+
+    .nav__mobile-menu-button {
+        float: right;
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        margin-top: 4px;
+        z-index: 10;
+        user-select: none;
+        font-size: 45px;
+        color: white;
+    }
+
+    .burger-container {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-right: 10px;
+    }
+
+    .burger-1 {
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .burger-2 {
+        margin-top: 10px;
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .burger-3 {
+        margin-top: 10px;
+        bottom: 0px;
+        width: 40px;
+        height: 5px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .close .burger-1 {
+        transform: rotate(45deg) translate(11px, 11px);
+    }
+
+    .close .burger-2 {
+        opacity: 0;
+    }
+
+    .close .burger-3 {
+        transform: rotate(-45deg) translate(10px, -10px);
+    }
+
+    .nav__mobile-checkbox:checked~.nav {
+        display: block;
+        top: 60px;
+    }
+
+    .nav__mobile-checkbox:checked~.nav__mobile-menu-button--burger {
+        display: none;
+    }
+
+    /* 
+    .nav__mobile-checkbox:checked~.nav__mobile-menu-button--close {
+        display: block;
+    } */
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

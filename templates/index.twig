@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+
+    <title></title>
+
+	{# Font awesome CDN #}
+    <script src="https://use.fontawesome.com/84732151cb.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+	{# Hero carousel CDN #}
+   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	{# Google Fonts	#}
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,400i,500,600,600i,700,700i&display=swap" rel="stylesheet">
+
+    <meta name="referrer" content="origin-when-cross-origin" />
+	
+	{# TODO: JQuery #}
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+    
+
+	{# Nav menu #}
+    <div class="nav">
+		<nav class="nav__container">
+			<ul class="nav__list">
+				<li class="nav__list-item"><a class="nav__link" href="#gallery">About</a></li>
+				<li class="nav__list-item"> <a class="nav__link" href="#about">Videography</a></li>
+				<li class="nav__list-item"> <a class="nav__link" href="#contact">Photography</a></li>
+				<li class="nav__list-item"> <a class="nav__link" href="#location">Contact</a></li>
+			</ul>
+		</nav>
+		
+		{# Mobile nav icon #}
+		{# <input type="checkbox" id="nav__mobile-checkbox" class="nav__mobile-checkbox">
+		<div class="nav__mobile-bar">
+			<label for="nav__mobile-checkbox" class="nav__mobile-menu-button nav__mobile-menu-button--burger">
+			<div class="burger-container" onclick="closeAnimation(this)">
+				<div class="burger-1"></div>
+				<div class="burger-2"></div>
+				<div class="burger-3"></div>
+			</div>
+			</label>
+		</div> #}
+    </div>
+
+	<div class="moon">
+		<svg id="moon" data-name="moon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 189.79 200">
+		<defs>
+			<style>
+			.cls-1 {
+				fill: #fff;
+			}
+			</style>
+		</defs>
+		<path id="moon-path" data-name="moon-path" class="cls-1" d="M178.43,151c-1.57.05-3.14.1-4.7.1-26.85,0-52.76-6.13-71-24.07A93,93,0,0,1,74.36,60a112.25,112.24,0,0,1,12-44.65A132.3,132.3,0,0,1,93.72,3.22,2,2,0,0,0,93.18.36,2.22,2.22,0,0,0,91.61,0a107.2,107.2,0,0,0-15,3.53C34,15.69,4.78,53.58,5.11,96.45,5.11,151.9,49.73,200,106.41,200a106,106,0,0,0,79.35-35.67A96.24,96.24,0,0,0,194.59,153a2.09,2.09,0,0,0-.78-2.92,2.28,2.28,0,0,0-1.43-.27A97.36,97.36,0,0,1,178.42,151Z" transform="translate(-5.1)"/>
+		</svg>
+	</div>
+
+
+    <div class="main">
+		<div class="hero">
+			<div class="hero__logo hero__logo--yellow">Team<br>Apollo</div>  
+			<div class="hero__logo hero__logo--blue">Team<br>Apollo</div>  
+			<div class="hero__logo hero__logo--red">Team<br>Apollo</div>  
+			<div class="hero__logo hero__logo--white">Team<br>Apollo</div>    
+		</div>
+
+		<div class="section section--about">
+		<div class="about__image-left">
+		</div>
+		<div class="about__image-right">
+		</div>
+		</div>
+		
+	</div>
+    
+	<div class="footer">Footer Content</div>
+	
+	{# Scripts #}
+	<script>
+        function closeAnimation(x) {
+        x.classList.toggle("close");
+    }
+    </script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
