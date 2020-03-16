@@ -160,6 +160,19 @@ body {
     clip-path: polygon(0% 0, 49% 0, 69% 100%, 0% 100%);
     background-image: url('https://blog.edinchavez.com/wp-content/uploads/2018/05/Best-Places-To-Photograph-In-NYC-5.jpg');
     background-size: contain;
+    border-bottom: none;
+}
+
+.about__text-background {
+    position: absolute;
+    background-color: white;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 60% 0, 25% 45%, 0 45%);
+    padding-left: 50px;
+    padding-top: 20px;
 }
 
 .about__image-right {
@@ -172,6 +185,52 @@ body {
     background-image: url('https://www.jamesmaherphotography.com/jamesmaherphotography/wp-content/uploads/2017/12/New_York_Street_Photography-2.jpg');
     background-size: contain;
     border: 5px solid white;
+    border-bottom: none;
+}
+
+.about__text {
+    font-size: 26px;
+    width: 25%;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-style: italic;
+}
+
+.about__read-more-background {
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    height: 8%;
+    top: 49%;
+    width: 25%;
+    background-color: white;
+    clip-path: polygon(0 0, 95% 0, 70% 100%, 0% 100%);
+}
+
+.about__read-more-text {
+    position: relative;
+    color: black;
+    text-decoration: underline;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    top: 20%;
+}
+
+
+/* FEATURED */
+
+.featured {
+    width: 44%;
+    /* height: calc(100vw * (16 / 9)); */
+    background-image: url('https://cdn.tourcms.com/a/11676/848/1/large.jpg');
+    background-attachment: fixed;
+    position: relative;
+    top: 1000px;
+    float: left;
+    margin: 3% 3%;
+    padding-bottom: calc(56.25% * 0.44);
+    box-sizing: border-box;
+    text-align: center;
 }
 
 
