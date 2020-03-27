@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery | Team Apollo</title>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+    <a class="back-link" href="../">&lt;&lt; BACK</a>
+    {% set entryQuery = craft.entries().section('Videography') %}
+	{% set entries = entryQuery.all() %}
+    {% set index = 1 %}
+    <div class="player-carousel">
+        {% for entry in entries %}
+            <div class="player" id="video-{{index}}">
+                <iframe class="iframe-{{index}}" src="{{entry.videoLink}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        {% set index = index + 1 %}
+        {% endfor %}
+    </div>
+    <div class="prev-button"></div>
+    <div class="next-button"></div>
+
+    <p class="description"> </p>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html>

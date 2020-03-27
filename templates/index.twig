@@ -2,47 +2,52 @@
 <html lang="en-US">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
 
-    <title>Team Apollo</title>
+	<title>Team Apollo</title>
 
 	{# Font awesome CDN #}
-    <script src="https://use.fontawesome.com/84732151cb.js"></script>
+	<script src="https://use.fontawesome.com/84732151cb.js"></script>
 
-    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.css">
 
 	{# Hero carousel CDN #}
-   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 
 	{# Google Fonts	#}
-    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,400i,500,600,600i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,400i,500,600,600i,700,700i|Caladea:700|Sen:wght@700&display=swap" rel="stylesheet">
 
-    <meta name="referrer" content="origin-when-cross-origin" />
+	<meta name="referrer" content="origin-when-cross-origin" />
 	
 	{# TODO: JQuery #}
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
 </head>
 
 
 
 <body>
-    
 
 	{# Nav menu #}
-    <div class="nav">
+	<div class="nav">
 		<nav class="nav__container">
 			<ul class="nav__list">
 				<li class="nav__list-item"><a class="nav__link" href="#about">About</a></li>
 				<li class="nav__list-item"><a class="nav__link" href="#videography">Videography</a></li>
 				<li class="nav__list-item"><a class="nav__link" href="#photography">Photography</a></li>
-				<li class="nav__list-item"><a class="nav__link" href="#contact">Contact</a></li>
+				<li class="nav__list-item"><a class="nav__link" href="#contact">Merch</a></li>
+				<li class="nav__list-item nav__list-item--contact"><a class="nav__link nav__link--contact" href="#contact">Contact</a></li>
 			</ul>
+			<div class="burger-container" onclick="closeAnimation(this)">
+            <div class="burger-1"></div>
+            <div class="burger-2"></div>
+            <div class="burger-3"></div>
+        </div>
 		</nav>
 		
 		{# Mobile nav icon #}
@@ -56,7 +61,7 @@
 			</div>
 			</label>
 		</div> #}
-    </div>
+	</div>
 
 	<div class="moon">
 		<svg id="moon" data-name="moon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 189.79 200">
@@ -72,7 +77,7 @@
 	</div>
 
 
-    <div class="main">
+	<div class="main">
 		<div class="hero">
 			<div class="hero__logo hero__logo--yellow">Team<br>Apollo</div>  
 			<div class="hero__logo hero__logo--blue">Team<br>Apollo</div>  
@@ -84,38 +89,296 @@
 			<div class="about__image-left">
 			</div>
 			<div class="about__text-background">
-				<p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus labore nihil autem magni nam, aut aspernatur cumque maxime aliquam necessitatibus magnam facilis enim iste nesciunt ipsum earum rerum harum nostrum! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<h2 class="about__header-text">Striving for greatness.</h2>
+				<p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus labore nihil autem magni nam, aut aspernatur cumque maxime aliquam necessitatibus magnam facilis enim iste nesciunt ipsum earum rerum harum nostrum! Lorem ipsum dolor sit amet consectetur adipisicing elit.  Possimus labore nihil autem magni nam.</p>
 			</div>
 			<div class="about__read-more-background">
-				<a href="#" class="about__read-more-text">READ MORE &gt;&gt;</a>
+				<a href="about" class="about__read-more-text">READ MORE &gt;&gt;</a>
 			</div>
 			<div class="about__image-right">
 			</div>
 		</div>
 
-		<div class="featured featured--1">
-			<span class="featured__new">NEW</span>
-			<p class="featured__title">NYC DRONE SHOTS</p>
+		<svg class='blur-svg'>
+			<filter id='sharpBlur'>
+				<feGaussianBlur stdDeviation='12'></feGaussianBlur>
+				<feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
+				<feComposite in2='SourceGraphic' operator='in'></feComposite>
+			</filter>
+		</svg>
+
+		<div class="section section--videography">
+			<div class="header-container header-container--videography">
+				<h2 class="header header--videography">Videography</h2>
+			</div>
+
+			<ul class="videography-container">
+			
+				<li class="featured">
+					<div class="featured__img featured--1__img"></div>
+					<div class="featured__border">
+						
+						<p class="featured__title">NYC DRONE <br/>SHOTS</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--2__img"></div>
+					<a href="gallery/#video-1">
+					<div class="featured__border">
+						
+						<p class="featured__title">SEATTLE ADVENTURE</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="gallery.twig"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+					</a>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--1__img"></div>
+					<a href="gallery/#video-2">
+						<div class="featured__border">
+							
+							<p class="featured__title">NYC DRONE <br/>SHOTS</p>
+							<div class="featured__separator"></div>
+							<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<div class="featured__cta-border"></div>
+							<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+						</div>
+					</a>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--2__img"></div>
+					<div class="featured__border">
+						
+						<p class="featured__title">SEATTLE ADVENTURE</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="gallery.twig/#video-2"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--1__img"></div>
+					<div class="featured__border">
+						
+						<p class="featured__title">NYC DRONE <br/>SHOTS</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--2__img"></div>
+					<div class="featured__border">
+						
+						<p class="featured__title">SEATTLE ADVENTURE</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--1__img"></div>
+					<div class="featured__border">
+						
+						<p class="featured__title">NYC DRONE <br/>SHOTS</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--2__img"></div>
+					<div class="featured__border">
+						
+						<p class="featured__title">SEATTLE ADVENTURE</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--1__img"></div>
+					<div class="featured__border">
+						
+						<p class="featured__title">NYC DRONE <br/>SHOTS</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--2__img"></div>
+					<div class="featured__border">
+						
+						<p class="featured__title">SEATTLE ADVENTURE</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--1__img"></div>
+					<div class="featured__border">
+						<span class="featured__new">NEW</span>
+						<p class="featured__title">NYC DRONE <br/>SHOTS</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+				<li class="featured">
+					<div class="featured__img featured--2__img"></div>
+					<div class="featured__border">
+						<span class="featured__new">NEW</span>
+						<p class="featured__title">SEATTLE ADVENTURE</p>
+						<div class="featured__separator"></div>
+						<p class="featured__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="featured__cta-border"></div>
+						<div class="featured__cta" href="#"><span class="featured__cta-text">VIEW FULL  &gt;&gt;</span></div>
+					</div>
+				</li>
+
+			</ul>
+			<div class="view-more-button">Show More</div>
 		</div>
 
-		<div class="featured featured--2">
-			<span class="featured__new">NEW</span>
-			<p class="featured__title">SEATTLE ADVENTURE</p>
+		<div class="section section--photography">
+			<div class="header--photography-container">
+				<h2 class="header header--photography">Photography</h2>	
+			</div>
+			<span class="photography__subheader">FOR EVERY OCCASION</span>
+
+				{% set entryQuery = craft.entries().section('Photography') %}
+				{% set entries = entryQuery.all() %}
+
+				{% set metaIndex = 1 %}
+
+				{% for entry in entries %}
+
+				{% set collectionTitle = entry.title %}
+				{% set collectionLocation = entry.location %}
+				{% set collectionDate = entry.date %}
+					<div class="photography__img-data">
+						<span class="photography__description meta-collection-{{ metaIndex }}">{{collectionTitle}}</span>
+						<span class="photography__location meta-collection-{{ metaIndex }}">{{collectionLocation}}</span>
+						<span class="photography__date meta-collection-{{ metaIndex }}">{{collectionDate}}</span>
+					</div>
+
+				{% set metaIndex = metaIndex + 1 %}
+				{% endfor %}
+
+			<div class="collections-controls-bg"></div>
+
+			<span class="collection-prev">&lt;&lt; PREV COLLECTION</span>
+			<span class="collection-next">NEXT COLLECTION &gt;&gt;</span>
+
+			<span class="collection-index-tag">COLLECTION</span>
+			<span class="collection-index">0 of 0</span>
+			<div class="carousel">
+
+			{% set index = 1 %}
+
+				{% for entry in entries %}
+					{% set assets = entry.images.all() %}
+
+					{% if assets|length %}
+					{% for rel in assets %}
+						<div class= "carousel__cell collection-{{ index }}" style="background-image: url('{{ rel.url }}')">
+						</div>
+					{% endfor %}
+					{% endif %}
+
+				{% set index = index + 1 %}
+				{% endfor %}
+
+			</div>
+
+			<span class="carousel-index">0/0</span>
+
+			<div class="photography__separator-1"></div>
+			<div class="photography__separator-2"></div>
+		</div>
+
+		<div class="section section--contact">
+		
+		<div class="contact__youtube">
+			<span class="contact__youtube-text">TEAM APOLLO ON <span class="contact__youtube-text--red">YOUTUBE</span></span>
+		</div>
+
+		<div class="contact__title">EMAIL</div>
+		<div class="contact__section contact__email">
+			<a class="contact__link" href="mailto: teamapollo@gmail.com">
+				teamapollovideos@gmail.com
+			</a>
+		</div>
+
+		<div class="contact__title">INSTAGRAM</div>
+		<div class="contact__section contact__instagram">
+			<a class="contact__link" href="#">
+				@teamapollo
+			</a>
+		</div>
+
+		<div class="contact__title">PERSONAL INSTAGRAMS</div>
+		<div class="contact__section contact__email">
+			<a class="contact__link" href="#">
+				@ryanlichtel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @marc_not_marcus
+			</a>
 		</div>
 		
+		</div>
+
 	</div>
-    
+
 	<div class="footer">Footer Content</div>
 	
 	{# Scripts #}
 	<script>
-        function closeAnimation(x) {
-        x.classList.toggle("close");
-    }
-    </script>
+		function closeAnimation(x) {
+		x.classList.toggle("close");
 
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="js/app.js"></script>
+		if ($('.nav__list').css('display') == 'block') {
+			$('.nav__list').css({
+				'display': 'none'
+			})
+		} else {
+			$('.nav__list').css({
+				'display': 'block'
+			})
+		}
+
+
+	}
+	</script>
+
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js" integrity="sha256-HfH85PYPD7XPxN3MmppGXnxsLZUrlu0dN/Kn4H7DA4E=" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
+	<script src="js/lazyload.js"></script>
 
 </body>
 
